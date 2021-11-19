@@ -34,8 +34,10 @@
       }
 
       var clamp_input = function(_this){
-        if(_this.value == "" )
+        if(_this.value == ""){
+          _this.value = 0;
           return;
+        }
 
         _this.value = clamp(parseInt(_this.value), parseInt(_this.min), parseInt(_this.max));
       }
